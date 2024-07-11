@@ -131,6 +131,27 @@ export function GET(request: NextRequest) {
 }
 ```
 
+## 平行路由
+在目录下创建`@folder1/page.tsx`和`@folder2/page.tsx`以创建两个平行页面
+他们会以props的形式传递给`layout.tsx` 
+```
+ /app
+----> /@folder1
+-------->  page.tsx
+----> /@folder2
+--------> page.tsx
+----> layout.tsx
+----> page.tsx 
+```
+```tsx
+export default Layout({
+  children,
+  folder1,
+  folder2
+}){
+  
+}
+```
 
 
 ## 响应
